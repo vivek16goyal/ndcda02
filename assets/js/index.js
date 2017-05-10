@@ -16,7 +16,7 @@ var APPType = "$";
 
 //  2)///////*******A to Z Dava Healing touch medico **********************//////////
 var Heading = "NDCDA";
-var PCODE = "dem0020";
+var PCODE = "ndcda";
 var FolderName = PCODE;
 var HomeSlideCnt = "1";
 var pDiscOnOrder = "1";
@@ -3844,42 +3844,11 @@ function UpdateProfile() {
     if ($("#pro_txtadd").val() == "") {
         textAnim('pro_txtadd', 'bounce');
     }
-    if ($("#pro_txtname").val() != "" && $("#pro_txtmo").val() != "" && $("#pro_txtemail").val() != "" && $("#pro_txtadd").val() != "") {
-        if ($("#pro_txtmo").val() == localStorage.getItem("PTNO")) {
+    if ($("#pro_txtname").val() != "" && $("#pro_txtmo").val() != "" && $("#pro_txtemail").val() != "" && $("#pro_txtadd").val() != "")
+    {
+       
             UpdateProfileData();
-        }
-        else {
-            loadmsg = "Checking Mobile No.";
-            $(".show-page-loading-msg").click();
-            var MoNo = $("#pro_txtmo").val();
-            $.ajax({
-                url: localStorage.getItem("APIURL") + "/Values/CheckNo?Mo=" + MoNo,
-                type: "GET",
-                dataType: "json",
-                cache: false,
-                success: function (data) {
-                    if (data.indexOf("$") == 0) {
-                        alert(data);
-                        $(".hide-page-loading-msg").click();
-                        $("#pro_txtmo").focus();
-                    }
-                    else if (data == "@") {
-                        alert("Mobile No AlReady Registered.");
-                        $(".hide-page-loading-msg").click();
-                    }
-                    else {
-                        $(".hide-page-loading-msg").click();
-                        loadmsg = "Sending OTP.";
-                        SendingOTP();
-                    }
-                },
-                //if any error occure
-                error: function (xmlHttpRequest, textStatus, errorThrown) {
-                    $(".hide-page-loading-msg").click();
-                    alert(errorThrown);
-                }
-            })
-        }
+       
     }
 
 }
@@ -3938,7 +3907,7 @@ function UpdateProfileData() {
     $("#DLLIC_no20C").val(localStorage.getItem("DLICNO20C"));
     $("#DLLIC_no20D").val(localStorage.getItem("DLICNO20D"));
 
-    if ($("#DLLIC_no20").text() == "" && $("#DLLIC_no21").text() == "" && $("#DLLIC_no20B").text() == "" && $("#DLLIC_no21B").text() == "" && $("#DLLIC_no20C").text()=="" && $("#DLLIC_no20D").text()=="")
+    if ($("#DLLIC_no20").val() == "" && $("#DLLIC_no21").val() == "" && $("#DLLIC_no20B").val() == "" && $("#DLLIC_no21B").val() == "" && $("#DLLIC_no20C").val()=="" && $("#DLLIC_no20D").val()=="")
     {
         loadmsg = "please Insert DLLIC NO...";
         $("#Label4").focus();
