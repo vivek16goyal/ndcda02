@@ -239,7 +239,7 @@
                 </ul>
                 <center>
             <ul data-role="listview" style="margin-top:30px;width:98%" class="theme-color-green">
-			<li data-icon="user"><a href="#profile" onclick="GetActiveSupplierList()" >My Profile </a></li>
+			<li data-icon="user"><a href="#profile" onclick="EditProfile()" >My Profile </a></li>
 			<li data-icon="info"><a onclick="index_click()" data-rel="close">Index Page</a></li>
             <li data-icon="home"><a onclick="home_click()" data-rel="close">Home Page</a></li>
          <!--   <li data-icon="calendar"><a onclick="Rpt_click()">Order Bill Report</a></li>-->
@@ -638,19 +638,34 @@
                                 <a href="#altITem" data-transition="slidedown" onclick="SubstitudeItemList()" id="lblContent" style="margin-left: 5px;"></a>
                             </td>
                         </tr>
-
-                        <!--<tr id="row-qty">
-                            <td>Qty:
+                         <!--<tr style="height: 10px;">
+                            <td>
+                                <p>Rate At
+                                     Launch  :</p>
+                            </td>
+                            <td>
+                                <label id="lblRate" style="margin-left: 5px;"></label>
+                            </td>
+                        </tr>-->
+                         <!-- <tr>
+                            <td>MRP At Launch :
+                            </td>
+                            <td colspan="2">
+                                <a href="#altITem" data-transition="slidedown" onclick="SubstitudeItemList()" id="A9" style="margin-left: 5px;"></a>
+                            </td>
+                        </tr>-->
+                        <tr id="row-qty">
+                            <td>
                             </td>
                             <td colspan="3">
                                 <table>
                                     <tr>
                                         <td>
-                                            <input type="number" min="1" data-theme="a" id="txt-qty" placeholder="Qty" style="display: inline;" pattern="[0-9]" />
+                                            <input type="number" min="1" data-theme="a" id="txt-qty" placeholder="Qty" style="display: none; visibility :hidden" pattern="[0-9]"  />
 
                                         </td>
                                         <td>
-                                            <input type="number" min="1" data-theme="a" id="txt-free" placeholder="Free" style="display: none;" pattern="[0-9]" />
+                                            <input type="number" min="1" data-theme="a" id="txt-free" placeholder="Free" style="display: none ;visibility :hidden" pattern="[0-9]" />
 
                                         </td>
 
@@ -658,7 +673,7 @@
                                 </table>
                             </td>
 
-                        </tr>-->
+                        </tr>
                        <!-- <tr>
                             <td>Genric:
                             </td>
@@ -1057,7 +1072,7 @@
                     <label id="profile_name" style="color:#1390cf;font-size:19px" class="theme-color-txt-red"></label>
                   
                      <a  onclick="EditProfile()"  >
-                            <img src="assets/img/pencil2.png" id="A3" style="left:12vw;" class="pro-img1" /></a>
+                           <!-- <img src="assets/img/pencil2.png" id="A3" style="left:12vw;" class="pro-img1" /></a>-->
                        
                     <img id="Profile-img" src="assets/img/add-user.png" class="pro-img"/> 
                           <!--  <a  onclick="ProfileImage()" style="" >-->
@@ -1071,7 +1086,7 @@
                 <table class="pro-menu">
                     <tr>
                         <td id="td_select" onclick="GetActiveSupplierList()">
-                            <label>This Service in Runing from </label>
+                            <label>Party</label>
                         </td>
                         <!--<td id="td_orderHist">
                             <label onclick="getOrderHistory()">History </label>
@@ -1086,7 +1101,7 @@
                 </table>
             </div>
             <div class="body-with-shadow">
-                <div id="select-div">
+             <!--   <div id="select-div">
                     <center>
                    <div id="Select" >
                           
@@ -1100,7 +1115,7 @@
                     </ul>
                     </div>
                     </center>
-                </div>
+                </div>-->
                 <div id="orderHistory-div">
                     <center>
                        <div role="main" class="ui-content" style="overflow-x: visible; width: 90%" id="Div-ord-history">
@@ -1302,7 +1317,7 @@
         </div>
         <div data-role="footer" data-position="fixed" class="my-footer">
             <!--<p>Copyright &copy; - All Rights Reserved  www.goyalonline.com </p>-->
-            <p></p>
+            <p>Developed By:- Yashaswi R. Narkhedkar</p>
         </div>
     </div>
 
