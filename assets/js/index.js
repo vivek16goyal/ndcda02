@@ -16,7 +16,7 @@ var APPType = "$";
 
 //  2)///////*******A to Z Dava Healing touch medico **********************//////////
 var Heading = "NDCDA";
-var PCODE = "ndcda";
+var PCODE = "dem0020";
 var FolderName = PCODE;
 var HomeSlideCnt = "1";
 var pDiscOnOrder = "1";
